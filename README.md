@@ -1,11 +1,7 @@
 ---
-title: My Openenv Space
-emoji: 🏢
-colorFrom: red
-colorTo: red
+title: OpenEnv Submission
+emoji: 🚀
+colorFrom: blue
+colorTo: green
 sdk: docker
-pinned: false
-license: apache-2.0
 ---
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
