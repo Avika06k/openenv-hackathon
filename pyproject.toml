@@ -1,0 +1,8 @@
+[project]
+name = "openenv-hackathon"
+version = "0.1.0"
+description = "OpenEnv submission"
+dependencies = [
+    "fastapi",
+    "uvicorn"
+]
