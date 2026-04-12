@@ -1,0 +1,9 @@
+name: codefix_env
+version: 1
+
+entrypoint:
+  reset: /reset
+  step: /step
+
+metadata:
+  description: OpenEnv hackathon submission
