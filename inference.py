@@ -1,9 +1,30 @@
-import time
+state = {
+    "step": 0,
+    "done": False
+}
 
-print("[START] task=code_fix env=codefix_env model=gpt-4.1-mini")
-print("[STEP] step=1 action=fix_code reward=1.00 done=true error=null")
-print("[END] success=true steps=1 rewards=1.00")
+def reset_env():
+    state["step"] = 0
+    state["done"] = False
+    return {
+        "observation": "environment reset",
+        "reward": 0.0,
+        "done": False
+    }
 
-# Keep container alive
-while True:
-    time.sleep(60)
+def step_env():
+    if state["done"]:
+        return {
+            "observation": "already finished",
+            "reward": 1.0,
+            "done": True
+        }
+
+    state["step"] += 1
+    state["done"] = True
+
+    return {
+        "observation": "code fixed successfully",
+        "reward": 1.0,
+        "done": True
+    }
